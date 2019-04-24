@@ -16,7 +16,11 @@ class cash_breaks():
         self.np_random, seed = seeding.np_random(seed)
         return [seed]
 
-    def reset(self): # get dollar values
+    def reset(self):
+        """
+        Creates matrix with 3 columns: dollar values, flag to clear, cursor location indicated by 1
+        :return: matrix
+        """
         start = np.zeros(100)
         values = cash_breaks.dollar_values(self)
         self.target_value = values.sum()
